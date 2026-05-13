@@ -1,17 +1,37 @@
-import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
+// src/firebase.js
+// Spendora Firebase Setup for Google Login
+
+import { initializeApp } from "firebase/app"
+
+import { getAuth } from "firebase/auth"
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
-};
+  apiKey:
+    "AIzaSyBEBRN43kpUtnFlAZIqbpbuOMYjkfz8M4E",
 
-const app = initializeApp(firebaseConfig);
+  authDomain:
+    "spendora-82a80.firebaseapp.com",
 
-export const auth = getAuth(app);
+  projectId:
+    "spendora-82a80",
 
-export default app;
+  storageBucket:
+    "spendora-82a80.firebasestorage.app",
+
+  messagingSenderId:
+    "815035739107",
+
+  appId:
+    "1:815035739107:web:515c30100a324713d1ced6",
+
+  measurementId:
+    "G-20SNKTWZTG"
+}
+
+const app =
+  initializeApp(
+    firebaseConfig
+  )
+
+export const auth =
+  getAuth(app)
